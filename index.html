@@ -3,15 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Steven Moynihan | AI-Powered Google Workspace & Microsoft 365</title>
+
+  <!-- Primary SEO Meta Tags -->
+  <title>Steven Moynihan | Google Workspace & Microsoft 365 AI Consultant San Diego</title>
+  <meta name="description" content="Expert Google Workspace & Microsoft 365 consultant in San Diego. Specializing in AI-powered migrations, Gemini automations, security/compliance (DoD/FedRAMP), and optimization. Ex-Meta, Salesforce engineer. Book a free audit today.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://yourdomain.com/"> <!-- Replace with your actual domain (e.g. stevenmoynihan.ai) once set -->
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="Steven Moynihan | AI-Powered Google Workspace & Microsoft 365 Expert">
+  <meta property="og:description" content="Senior engineer helping San Diego & remote teams with seamless migrations, Gemini AI automations, security hardening, and productivity gains. Ex-Meta/Salesforce. Free 30-min audit available.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourdomain.com/">
+  <meta property="og:image" content="https://yourdomain.com/og-image.jpg"> <!-- Upload 1200×630 image later and update URL -->
+  <meta property="og:site_name" content="Steven Moynihan Consulting">
+
+  <!-- Twitter/X Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Steven Moynihan | Google Workspace AI Consultant San Diego">
+  <meta name="twitter:description" content="AI automations, migrations & security for Google Workspace / M365. Book free audit with ex-Meta engineer.">
+  <meta name="twitter:image" content="https://yourdomain.com/og-image.jpg">
+
+  <!-- Styles & Scripts -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <!-- Google Calendar Scheduling Button CSS -->
   <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+
   <style>
-    body { font-family: system-ui, -apple-system, sans-serif; }
-    .hero-bg { background: linear-gradient(135deg, #0f172a 0%, #1e2937 100%); }
-    /* Optional: Make Google button match your theme better */
+    body { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+    .hero-bg { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); }
+    .resume-section h3 { @apply text-2xl font-bold text-emerald-400 mt-8 mb-3; }
+    .resume-section h4 { @apply text-xl font-semibold text-white mt-6 mb-2; }
+    .resume-section ul { @apply list-disc pl-6 space-y-1.5 text-zinc-300; }
     .qxCTlb {
       font-size: 1.25rem !important;
       padding: 1rem 2rem !important;
@@ -31,10 +55,9 @@
       </div>
       <div class="hidden md:flex gap-8 text-sm">
         <a href="#services" class="hover:text-emerald-400 transition">Services</a>
-        <a href="#about" class="hover:text-emerald-400 transition">About</a>
+        <a href="#experience" class="hover:text-emerald-400 transition">Experience</a>
         <a href="#credentials" class="hover:text-emerald-400 transition">Credentials</a>
       </div>
-      <!-- Fallback navbar button -->
       <a href="https://calendar.app.google/nraayF4Ssm1NNLbX9" target="_blank"
          class="bg-emerald-500 hover:bg-emerald-600 px-6 py-2.5 rounded-xl font-semibold transition">Book Free Audit</a>
     </div>
@@ -48,22 +71,20 @@
         <span class="text-emerald-400">Migrations • Automations • Security</span>
       </h1>
       <p class="text-xl text-zinc-300 mb-10 max-w-2xl mx-auto">
-        Senior Google Workspace Engineer (ex-Meta, Salesforce, DoD/FedRAMP). I help San Diego & remote teams cut 20+ hours/week with Gemini AI agents, seamless migrations, and bulletproof compliance.
+        Senior Google Workspace Engineer (ex-Meta, Salesforce, DoD/FedRAMP). Helping San Diego & remote teams save 20+ hours/week with Gemini AI agents, zero-downtime migrations, and bulletproof compliance.
       </p>
 
-      <!-- Google Calendar Popup Button Integration -->
+      <!-- Google Calendar Popup Button -->
       <div class="my-10">
-        <!-- Placeholder where the Google button will be injected -->
         <div id="booking-button-placeholder" class="inline-block"></div>
 
-        <!-- Google Scheduling Scripts -->
         <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
         <script>
           (function() {
             window.addEventListener('load', function() {
               calendar.schedulingButton.load({
                 url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ0pK1R1OxEzahkANK7miZytDT_H3RdjUdGnANsccG9yL63YEglNkATHd5wcE0iTR7TqpnPorcx9?gv=true',
-                color: '#10B981',  // emerald-500
+                color: '#10B981',
                 label: 'Book Free 30-min AI Audit',
                 target: document.getElementById('booking-button-placeholder')
               });
@@ -71,7 +92,6 @@
           })();
         </script>
 
-        <!-- Fallback if popup doesn't load (e.g., ad blocker, timing issue) -->
         <p class="text-sm text-zinc-400 mt-4">
           If the button doesn't appear, <a href="https://calendar.app.google/nraayF4Ssm1NNLbX9" target="_blank" class="text-emerald-400 hover:underline">click here to open the booking page directly</a>.
         </p>
@@ -88,71 +108,171 @@
       <div class="grid md:grid-cols-3 gap-8">
         <div class="bg-zinc-800 p-8 rounded-3xl border border-zinc-700 hover:border-emerald-500 transition">
           <h3 class="text-2xl font-semibold mb-4">AI Migrations & Cutovers</h3>
-          <p class="text-zinc-400">GWS ↔ Microsoft 365, full data migration, zero downtime, Gemini AI post-migration optimization.</p>
-          <p class="text-emerald-400 mt-6 font-medium">$8k – $25k • 2–4 weeks</p>
+          <p class="text-zinc-400">Zero-downtime GWS ↔ Microsoft 365 migrations with Gemini AI optimization and full training.</p>
+          <p class="text-emerald-400 mt-6 font-medium">Starting at $1,997 one-time</p>
         </div>
         <div class="bg-zinc-800 p-8 rounded-3xl border border-zinc-700 hover:border-emerald-500 transition">
           <h3 class="text-2xl font-semibold mb-4">Custom Gemini AI Automations</h3>
-          <p class="text-zinc-400">Apps Script + Gemini agents that auto-sort tickets, generate reports, enforce compliance, and more.</p>
-          <p class="text-emerald-400 mt-6 font-medium">$4k – $15k • Recurring options</p>
+          <p class="text-zinc-400">Build Apps Script + Gemini agents for reporting, compliance, ticketing, and workflows.</p>
+          <p class="text-emerald-400 mt-6 font-medium">Starting at $1,997 one-time</p>
         </div>
         <div class="bg-zinc-800 p-8 rounded-3xl border border-zinc-700 hover:border-emerald-500 transition">
           <h3 class="text-2xl font-semibold mb-4">Security & Monthly Optimization</h3>
-          <p class="text-zinc-400">FedRAMP/DoD-grade configs + ongoing AI health checks and new feature rollouts.</p>
-          <p class="text-emerald-400 mt-6 font-medium">$2k – $5k/month retainer</p>
+          <p class="text-zinc-400">FedRAMP/DoD-grade configs, ongoing AI enhancements, monitoring & support.</p>
+          <p class="text-emerald-400 mt-6 font-medium">$1,997+/month retainer</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Paid / Retainer Section (Stripe placeholders) -->
+  <!-- Paid Booking with Stripe -->
   <section class="py-20 bg-zinc-900 border-t border-zinc-800">
-    <div class="max-w-4xl mx-auto px-6 text-center">
-      <h2 class="text-4xl font-bold mb-6">Ready for Paid Strategy or Retainer?</h2>
-      <p class="text-xl text-zinc-400 mb-12">Pay securely with Stripe — I'll confirm your session right after payment.</p>
-      <div class="flex flex-col sm:flex-row gap-6 justify-center">
-        <a href="https://buy.stripe.com/REPLACE_WITH_YOUR_30MIN_STRATEGY_LINK" target="_blank"
-           class="bg-white text-zinc-900 font-semibold px-10 py-6 rounded-3xl hover:bg-emerald-400 transition flex-1 max-w-xs">
-          30-min Strategy Session — $297<br>
-          <span class="text-sm opacity-70">Instant booking + custom roadmap</span>
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold mb-6">Get Started – Secure Payment via Stripe</h2>
+      <p class="text-xl text-zinc-400 mb-12">Choose your package. After payment, I'll confirm your session within 24 hours.</p>
+      <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <a href="https://buy.stripe.com/9B6bJ37335Tk3Bv34p8k806" target="_blank"
+           class="bg-white text-zinc-900 font-semibold px-8 py-10 rounded-3xl hover:bg-emerald-400 transition shadow-xl flex flex-col items-center justify-center">
+          <div class="text-3xl font-bold mb-2">$297</div>
+          <div class="text-lg mb-3">30-min Strategy Session</div>
+          <p class="text-sm opacity-80">Quick audit + custom roadmap</p>
         </a>
-        <a href="https://buy.stripe.com/REPLACE_WITH_YOUR_FULL_AUDIT_LINK" target="_blank"
-           class="bg-emerald-500 text-black font-semibold px-10 py-6 rounded-3xl hover:bg-emerald-400 transition flex-1 max-w-xs">
-          Full AI Migration Audit — $997<br>
-          <span class="text-sm opacity-70">Includes 60-min deep dive</span>
+
+        <a href="https://buy.stripe.com/eVq7sN877ftU5JD48t8k807" target="_blank"
+           class="bg-emerald-500 text-black font-semibold px-8 py-10 rounded-3xl hover:bg-emerald-400 transition shadow-xl flex flex-col items-center justify-center">
+          <div class="text-3xl font-bold mb-2">From $1,997</div>
+          <div class="text-lg mb-3">Full Migration / Automation Project</div>
+          <p class="text-sm opacity-80">Zero-downtime + AI implementation</p>
+        </a>
+
+        <a href="https://buy.stripe.com/5kQ8wRdrr3Lc8VP7kF8k808" target="_blank"
+           class="bg-emerald-600 text-white font-semibold px-8 py-10 rounded-3xl hover:bg-emerald-500 transition shadow-xl flex flex-col items-center justify-center">
+          <div class="text-3xl font-bold mb-2">$1,997+/mo</div>
+          <div class="text-lg mb-3">Monthly Optimization Retainer</div>
+          <p class="text-sm opacity-80">Ongoing support & enhancements</p>
         </a>
       </div>
-      <p class="text-xs text-zinc-500 mt-10">Monthly retainers available — email me after booking to discuss</p>
+      <p class="text-sm text-zinc-500 mt-12">
+        Questions? <a href="mailto:stevenrmoynihan@gmail.com" class="text-emerald-400 hover:underline">stevenrmoynihan@gmail.com</a> • (602) 541-3881
+      </p>
     </div>
   </section>
 
-  <!-- About -->
-  <section id="about" class="py-20">
-    <div class="max-w-4xl mx-auto px-6 text-center">
-      <h2 class="text-4xl font-bold mb-6">Hi, I’m Steven Moynihan</h2>
-      <p class="text-lg text-zinc-300 leading-relaxed max-w-3xl mx-auto">
-        Senior Google Workspace & cloud collaboration engineer with 8+ years helping organizations migrate, secure, and optimize platforms. Known for turning complex requirements into high-adoption solutions — especially in compliance-heavy environments (DoD/FedRAMP).
-      </p>
-      <p class="mt-6 text-zinc-400">Former roles at Meta, Salesforce, Brio Technologies, and more. Google Cloud Professional Administrator certified.</p>
+  <!-- Professional Experience -->
+  <section id="experience" class="py-20">
+    <div class="max-w-5xl mx-auto px-6 resume-section">
+      <h2 class="text-4xl font-bold text-center mb-12">Professional Experience</h2>
+
+      <h3>Brio Technologies — GWS Solutions Engineer</h3>
+      <p class="text-zinc-400 mb-2">Remote | Apr 2025 – Present (Full-Time)</p>
+      <ul>
+        <li>Serve as trusted technical advisor: translate business requirements into secure, scalable Google Workspace solutions.</li>
+        <li>Run discovery sessions; design target architectures and implementation plans aligned to client objectives.</li>
+        <li>Present proposals and technical solutions to technical and non-technical stakeholders; support sales cycles and deal closures.</li>
+        <li>Recommend best practices to optimize Gmail, Drive, and collaboration workflows; improve productivity and governance.</li>
+        <li>Provide ongoing support and guidance post-implementation to ensure customer success and satisfaction.</li>
+      </ul>
+
+      <h4>Karcher — Google Workspace Developer</h4>
+      <p class="text-zinc-400 mb-2">Remote | Feb 2025 – Apr 2025 (Contract)</p>
+      <ul>
+        <li>Developed Google Apps Script (JavaScript) solutions migrated from VBA automation.</li>
+        <li>Provided post-migration support for Microsoft 365 to Google Workspace transition.</li>
+        <li>Created and delivered end-user training curriculum to improve adoption and self-service.</li>
+        <li>Partnered with IT leadership to execute deliverables for Office 365 phase-out initiative.</li>
+      </ul>
+
+      <h4>66 Degrees — Google Workspace Deployment Lead</h4>
+      <p class="text-zinc-400 mb-2">Remote | Jun 2024 – Oct 2024 (Contract)</p>
+      <ul>
+        <li>Led Google Workspace-to-Workspace and Google Workspace-to-Microsoft 365 migration projects.</li>
+        <li>Managed milestones, risks, and stakeholder expectations; maintained delivery visibility via JIRA.</li>
+        <li>Migrated email, Drive, and SaaS data; executed validation and post-cutover support.</li>
+        <li>Utilized GitHub for version control; leveraged Linux VM and PowerShell for automation.</li>
+        <li>Configured multi-domain environments using Advanced GAM scripting and admin best practices.</li>
+      </ul>
+
+      <h4>Salesforce — Collaboration Systems Engineer</h4>
+      <p class="text-zinc-400 mb-2">Remote | Oct 2023 – Apr 2024 (Contract)</p>
+      <ul>
+        <li>Ensured compliance with DoD requirements; supported security efforts for FedRAMP initiatives.</li>
+        <li>Built automation using Advanced GAM, Google Apps Script, and development tooling (Visual Studio).</li>
+        <li>Deployed and analyzed code via Heroku PaaS; supported troubleshooting and operational improvements.</li>
+      </ul>
+
+      <h4>Pansophic Learning — Systems Engineer II (Google Workspace SME)</h4>
+      <p class="text-zinc-400 mb-2">Remote | Feb 2023 – Oct 2023 (Contract)</p>
+      <ul>
+        <li>Provided strategic Google Workspace consulting and change management guidance to stakeholders.</li>
+        <li>Designed and implemented secure configurations; improved governance and admin workflows.</li>
+        <li>Automated processes using PowerShell, Python, and JavaScript to reduce manual effort.</li>
+        <li>Delivered training sessions to increase user adoption and productivity across teams.</li>
+      </ul>
+
+      <h4>Meta (Facebook) — Senior Google Workspace Engineer (SME)</h4>
+      <p class="text-zinc-400 mb-2">Remote | Jun 2022 – Feb 2023 (Contract)</p>
+      <ul>
+        <li>Provided technical leadership for Google Workspace transitions and platform improvements.</li>
+        <li>Built and delivered training to improve adoption; supported stakeholder enablement.</li>
+        <li>Customized configurations to align with business needs; performed UAT and process improvements.</li>
+      </ul>
+
+      <h4>Kincaid IT — Google Workspace Deployment Engineer</h4>
+      <p class="text-zinc-400 mb-2">Remote | Nov 2020 – Jun 2022 (Full-Time)</p>
+      <ul>
+        <li>Led multiple Google Workspace deployments and migrations supporting thousands of users.</li>
+        <li>Conducted IT assessments to improve infrastructure posture and security outcomes.</li>
+        <li>Integrated third-party applications; automated administrative tasks and reporting.</li>
+        <li>Delivered technical training and created knowledge base documentation for support teams.</li>
+      </ul>
+
+      <h4>SADA — Google Cloud Consultant II</h4>
+      <p class="text-zinc-400 mb-2">North Hollywood, CA (Hybrid) | Oct 2018 – Aug 2020 (Full-Time)</p>
+      <ul>
+        <li>Troubleshot Google Workspace issues; supported admin console operations and user support.</li>
+        <li>Provided internal IT support for executive teams; ensured reliable collaboration workflows.</li>
+        <li>Automated recurring admin tasks using Advanced GAM and scripting tools.</li>
+        <li>Assisted with MDM initiatives and security compliance efforts.</li>
+      </ul>
+
+      <h4>Finchloom — Cloud Administrator (Microsoft 365)</h4>
+      <p class="text-zinc-400 mb-2">Westlake Village, CA (On-Site) | Apr 2017 – Jan 2018 (Full-Time)</p>
+      <ul>
+        <li>Managed Microsoft 365, Azure AD, Intune, and security compliance configurations.</li>
+        <li>Configured SSO authentication and multi-factor security policies to strengthen access controls.</li>
+        <li>Led Office 365 and Azure migration efforts, including Exchange and file storage transitions.</li>
+      </ul>
     </div>
   </section>
 
   <!-- Credentials -->
   <section id="credentials" class="py-20 bg-zinc-900">
-    <div class="max-w-6xl mx-auto px-6">
-      <h2 class="text-4xl font-bold text-center mb-12">Proven Expertise</h2>
-      <div class="grid md:grid-cols-3 gap-6 text-center text-sm">
-        <div class="bg-zinc-800 p-6 rounded-2xl">Google Cloud Professional Administrator</div>
-        <div class="bg-zinc-800 p-6 rounded-2xl">CloudM Migrate Certified</div>
-        <div class="bg-zinc-800 p-6 rounded-2xl">Google Workspace Education Deployment & Services</div>
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12">Education & Certifications</h2>
+      <div class="grid md:grid-cols-2 gap-8 text-center">
+        <div>
+          <h3 class="text-2xl font-semibold mb-4">Education</h3>
+          <p class="text-zinc-300">Associate Degree, Network & Systems Administration</p>
+          <p class="text-zinc-400">ITT Tech, Oxnard, CA</p>
+        </div>
+        <div>
+          <h3 class="text-2xl font-semibold mb-4">Certifications</h3>
+          <ul class="list-none space-y-3 text-zinc-300">
+            <li>Google Cloud Professional Administrator</li>
+            <li>CloudM Migrate Certified</li>
+            <li>Google Workspace Education Deployment & Services Certifications</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="bg-black py-12 text-center text-zinc-500 text-sm">
-    © 2026 Steven Moynihan • San Diego, CA • Remote Worldwide<br>
-    <a href="mailto:stevenrmoynihan@gmail.com" class="hover:text-emerald-400">stevenrmoynihan@gmail.com | (602) 541-3881</a>
+    <div class="max-w-6xl mx-auto px-6">
+      © 2026 Steven Moynihan • San Diego, CA • Remote Worldwide<br>
+      <a href="mailto:stevenrmoynihan@gmail.com" class="hover:text-emerald-400">(602) 541-3881 | stevenrmoynihan@gmail.com</a>
+    </div>
   </footer>
 
 </body>
