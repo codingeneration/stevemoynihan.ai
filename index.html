@@ -6,15 +6,23 @@
   <title>Steven Moynihan | AI-Powered Google Workspace & Microsoft 365</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Google Calendar Scheduling Button CSS -->
+  <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
   <style>
     body { font-family: system-ui, -apple-system, sans-serif; }
     .hero-bg { background: linear-gradient(135deg, #0f172a 0%, #1e2937 100%); }
-    iframe { border-radius: 16px; box-shadow: 0 10px 30px -10px rgb(16 185 129); }
+    /* Optional: Make Google button match your theme better */
+    .qxCTlb {
+      font-size: 1.25rem !important;
+      padding: 1rem 2rem !important;
+      border-radius: 1rem !important;
+      font-weight: 600 !important;
+    }
   </style>
 </head>
 <body class="bg-zinc-950 text-white">
 
-  <!-- Navbar (same as before) -->
+  <!-- Navbar -->
   <nav class="bg-zinc-900 border-b border-zinc-800 sticky top-0 z-50">
     <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
       <div class="flex items-center gap-3">
@@ -26,6 +34,7 @@
         <a href="#about" class="hover:text-emerald-400 transition">About</a>
         <a href="#credentials" class="hover:text-emerald-400 transition">Credentials</a>
       </div>
+      <!-- Fallback navbar button -->
       <a href="https://calendar.app.google/nraayF4Ssm1NNLbX9" target="_blank"
          class="bg-emerald-500 hover:bg-emerald-600 px-6 py-2.5 rounded-xl font-semibold transition">Book Free Audit</a>
     </div>
@@ -38,71 +47,113 @@
         AI-Powered Google Workspace & Microsoft 365<br>
         <span class="text-emerald-400">Migrations • Automations • Security</span>
       </h1>
-      <p class="text-xl text-zinc-300 mb-10">Senior Google Workspace Engineer (ex-Meta, Salesforce, DoD/FedRAMP). Book your free 30-min AI audit below.</p>
-      <a href="https://calendar.app.google/nraayF4Ssm1NNLbX9" target="_blank"
-         class="inline-block bg-emerald-500 hover:bg-emerald-600 px-10 py-5 rounded-2xl text-xl font-semibold mb-8">
-        → Schedule Your Free 30-min AI Audit Now
-      </a>
-    </div>
-  </section>
+      <p class="text-xl text-zinc-300 mb-10 max-w-2xl mx-auto">
+        Senior Google Workspace Engineer (ex-Meta, Salesforce, DoD/FedRAMP). I help San Diego & remote teams cut 20+ hours/week with Gemini AI agents, seamless migrations, and bulletproof compliance.
+      </p>
 
-  <!-- Embedded Booking Calendar -->
-  <section class="py-16 bg-zinc-900">
-    <div class="max-w-5xl mx-auto px-6">
-      <h2 class="text-3xl font-bold text-center mb-8">Book Directly on My Calendar</h2>
-      <div class="bg-zinc-950 p-4 rounded-3xl">
-        <iframe 
-          src="https://calendar.app.google/nraayF4Ssm1NNLbX9" 
-          width="100%" 
-          height="720" 
-          frameborder="0" 
-          allowfullscreen>
-        </iframe>
+      <!-- Google Calendar Popup Button Integration -->
+      <div class="my-10">
+        <!-- Placeholder where the Google button will be injected -->
+        <div id="booking-button-placeholder" class="inline-block"></div>
+
+        <!-- Google Scheduling Scripts -->
+        <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+        <script>
+          (function() {
+            window.addEventListener('load', function() {
+              calendar.schedulingButton.load({
+                url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ0pK1R1OxEzahkANK7miZytDT_H3RdjUdGnANsccG9yL63YEglNkATHd5wcE0iTR7TqpnPorcx9?gv=true',
+                color: '#10B981',  // emerald-500
+                label: 'Book Free 30-min AI Audit',
+                target: document.getElementById('booking-button-placeholder')
+              });
+            });
+          })();
+        </script>
+
+        <!-- Fallback if popup doesn't load (e.g., ad blocker, timing issue) -->
+        <p class="text-sm text-zinc-400 mt-4">
+          If the button doesn't appear, <a href="https://calendar.app.google/nraayF4Ssm1NNLbX9" target="_blank" class="text-emerald-400 hover:underline">click here to open the booking page directly</a>.
+        </p>
       </div>
-      <p class="text-center text-zinc-400 text-sm mt-4">30-minute slots • Google Meet • Instant confirmation</p>
+
+      <p class="text-sm text-zinc-400">Serving biotech, defense contractors, professional services & growing teams in San Diego + nationwide</p>
     </div>
   </section>
 
-  <!-- Services (with Stripe placeholders) -->
-  <section id="services" class="py-20">
+  <!-- Services -->
+  <section id="services" class="py-20 bg-zinc-900">
     <div class="max-w-6xl mx-auto px-6">
       <h2 class="text-4xl font-bold text-center mb-12">High-Impact Services</h2>
       <div class="grid md:grid-cols-3 gap-8">
-        <!-- Service cards same as before, plus Pay buttons at bottom of each -->
-        <div class="bg-zinc-800 p-8 rounded-3xl ..."> ... </div> <!-- keep your existing cards -->
-        <!-- Example paid button inside a card or new section below -->
+        <div class="bg-zinc-800 p-8 rounded-3xl border border-zinc-700 hover:border-emerald-500 transition">
+          <h3 class="text-2xl font-semibold mb-4">AI Migrations & Cutovers</h3>
+          <p class="text-zinc-400">GWS ↔ Microsoft 365, full data migration, zero downtime, Gemini AI post-migration optimization.</p>
+          <p class="text-emerald-400 mt-6 font-medium">$8k – $25k • 2–4 weeks</p>
+        </div>
+        <div class="bg-zinc-800 p-8 rounded-3xl border border-zinc-700 hover:border-emerald-500 transition">
+          <h3 class="text-2xl font-semibold mb-4">Custom Gemini AI Automations</h3>
+          <p class="text-zinc-400">Apps Script + Gemini agents that auto-sort tickets, generate reports, enforce compliance, and more.</p>
+          <p class="text-emerald-400 mt-6 font-medium">$4k – $15k • Recurring options</p>
+        </div>
+        <div class="bg-zinc-800 p-8 rounded-3xl border border-zinc-700 hover:border-emerald-500 transition">
+          <h3 class="text-2xl font-semibold mb-4">Security & Monthly Optimization</h3>
+          <p class="text-zinc-400">FedRAMP/DoD-grade configs + ongoing AI health checks and new feature rollouts.</p>
+          <p class="text-emerald-400 mt-6 font-medium">$2k – $5k/month retainer</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Paid / Retainer Booking with Stripe -->
+  <!-- Paid / Retainer Section (Stripe placeholders) -->
   <section class="py-20 bg-zinc-900 border-t border-zinc-800">
     <div class="max-w-4xl mx-auto px-6 text-center">
       <h2 class="text-4xl font-bold mb-6">Ready for Paid Strategy or Retainer?</h2>
-      <p class="text-xl text-zinc-400 mb-12">Choose your package and pay securely with Stripe — I’ll confirm the time right after payment.</p>
-      
-      <!-- REPLACE THESE WITH YOUR REAL STRIPE LINKS -->
+      <p class="text-xl text-zinc-400 mb-12">Pay securely with Stripe — I'll confirm your session right after payment.</p>
       <div class="flex flex-col sm:flex-row gap-6 justify-center">
-        <a href="https://buy.stripe.com/YOUR_30MIN_STRATEGY_LINK" 
-           target="_blank"
+        <a href="https://buy.stripe.com/REPLACE_WITH_YOUR_30MIN_STRATEGY_LINK" target="_blank"
            class="bg-white text-zinc-900 font-semibold px-10 py-6 rounded-3xl hover:bg-emerald-400 transition flex-1 max-w-xs">
           30-min Strategy Session — $297<br>
           <span class="text-sm opacity-70">Instant booking + custom roadmap</span>
         </a>
-        
-        <a href="https://buy.stripe.com/YOUR_FULL_AUDIT_LINK" 
-           target="_blank"
+        <a href="https://buy.stripe.com/REPLACE_WITH_YOUR_FULL_AUDIT_LINK" target="_blank"
            class="bg-emerald-500 text-black font-semibold px-10 py-6 rounded-3xl hover:bg-emerald-400 transition flex-1 max-w-xs">
           Full AI Migration Audit — $997<br>
           <span class="text-sm opacity-70">Includes 60-min deep dive</span>
         </a>
       </div>
-      
-      <p class="text-xs text-zinc-500 mt-10">Monthly retainers also available — message me after booking</p>
+      <p class="text-xs text-zinc-500 mt-10">Monthly retainers available — email me after booking to discuss</p>
     </div>
   </section>
 
-  <!-- Rest of your site (About, Credentials, Footer) — copy from the previous version I gave you -->
+  <!-- About -->
+  <section id="about" class="py-20">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold mb-6">Hi, I’m Steven Moynihan</h2>
+      <p class="text-lg text-zinc-300 leading-relaxed max-w-3xl mx-auto">
+        Senior Google Workspace & cloud collaboration engineer with 8+ years helping organizations migrate, secure, and optimize platforms. Known for turning complex requirements into high-adoption solutions — especially in compliance-heavy environments (DoD/FedRAMP).
+      </p>
+      <p class="mt-6 text-zinc-400">Former roles at Meta, Salesforce, Brio Technologies, and more. Google Cloud Professional Administrator certified.</p>
+    </div>
+  </section>
+
+  <!-- Credentials -->
+  <section id="credentials" class="py-20 bg-zinc-900">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12">Proven Expertise</h2>
+      <div class="grid md:grid-cols-3 gap-6 text-center text-sm">
+        <div class="bg-zinc-800 p-6 rounded-2xl">Google Cloud Professional Administrator</div>
+        <div class="bg-zinc-800 p-6 rounded-2xl">CloudM Migrate Certified</div>
+        <div class="bg-zinc-800 p-6 rounded-2xl">Google Workspace Education Deployment & Services</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black py-12 text-center text-zinc-500 text-sm">
+    © 2026 Steven Moynihan • San Diego, CA • Remote Worldwide<br>
+    <a href="mailto:stevenrmoynihan@gmail.com" class="hover:text-emerald-400">stevenrmoynihan@gmail.com | (602) 541-3881</a>
+  </footer>
 
 </body>
 </html>
